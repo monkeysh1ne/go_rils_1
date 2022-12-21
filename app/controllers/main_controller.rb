@@ -1,7 +1,8 @@
 class MainController < ApplicationController
 
     def index
-        flash[:notice] = "Logged in successfully"
-        flash[:alert] = "Invalid email or password"
+        # the .now method on these ensures one time display in view only (does not persist in cookies)
+        flash.now[:notice] = "Logged in successfully"
+        flash.now[:alert] = "Invalid email or password"
     end
 end
