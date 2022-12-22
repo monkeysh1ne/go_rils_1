@@ -14,7 +14,11 @@
             <%= link_to "About", about_path, class: "nav-link"  %>
             <%# <a class="nav-link" href="/about">About</a> %>
         </li>
-        </li>
+        <% if @user  %>
+          <li class = "nav-link">
+            Logged in as: <strong><%= @user.email %></strong>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
