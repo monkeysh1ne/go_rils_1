@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
         if @user.save
             # set session cookie for login securely
             session[:user_id] = @user.id
-            redirect_to root_path, notice: "Successfully created and saved account"
+            redirect_to root_path, notice: "Successfully created account"
         else
             render :new, status: :unprocessable_entity
         end

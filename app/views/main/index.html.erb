@@ -2,6 +2,10 @@
     <div class="container">
         <div class="col">
             <h1 class="row justify-content-md-center">Welcome to MyApp Home Page</h1>
+                <% if @user  %>
+                    Logged in as: <strong><%= @user.email %></strong>
+                    <%= button_to "Logout", logout_path, method: :delete %>
+                <% end %>
         </div>
     </div>
 </div>
